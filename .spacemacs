@@ -265,7 +265,8 @@ you should place your code here."
    :configure-cmd "cmake -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=on ..-DPATH64_ENABLE_LIBCXX=ON"
    :compile-cmd "make -j8")
 
-  (irony-cdb-search-directory-list (quote ("." "build" "buildDbg")))
+  (setq irony-cdb-search-directory-list (quote ("." "build" "buildDbg")))
+
   (savehist-mode 1)
   (c-add-style "llvm.org"
                '("gnu"
